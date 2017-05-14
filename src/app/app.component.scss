@@ -1,0 +1,44 @@
+.dg-app{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  .sidenav-container{
+    height: 100%;
+    .content-container{
+      display: flex;
+      height: 100%;
+      .view-container{
+        flex: 1 0;
+      }
+      .friend-button-container{
+        height: 100%;
+        width: 30px;
+        transition: background-color 0.3s ease;
+
+        &:hover{
+          cursor: pointer;
+          background-color: rgb(245, 245, 245);
+        }
+        user-select: none;
+        &.sidenav-open{
+          md-icon{
+            transform: rotate(180deg);
+          }
+        }
+        md-icon{
+          opacity: 0.5;
+          transform-origin: 26px 39px;
+          transition: transform 0.2s;
+          position: absolute;
+          top:38%;
+          transform: translateX(-20px);
+          $chevron-icon-height: 70px;
+          font-size: 70px;
+
+        }
+      }
+    }
+  }
+}

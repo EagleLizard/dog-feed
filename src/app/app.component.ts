@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dg works!';
+  isSidenavOpen:boolean = false;
+
+  constructor(){
+    this.onSidenavClick.bind(this);
+  }
+
+  onSidenavClick(sidenav){
+    this.isSidenavOpen = !this.isSidenavOpen;
+    sidenav.toggle();
+  }
 }

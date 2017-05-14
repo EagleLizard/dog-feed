@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<div class="dg-app">
+
+  <dg-header>
+  </dg-header>
+
+  <md-sidenav-container class="sidenav-container">
+    <div class="content-container">
+      <div class="view-container">
+        hey
+      </div>
+      <div
+        class="friend-button-container mat-primary"
+        (click)="onSidenavClick(sidenav)"
+        [ngClass]="{'sidenav-open':isSidenavOpen}">
+        <md-icon>
+          chevron_left
+        </md-icon>
+      </div>
+    </div>
+    <md-sidenav
+      #sidenav
+      align="end"
+      mode="side"
+      opened="false">
+      <dg-pals>
+      </dg-pals>
+    </md-sidenav>
+  </md-sidenav-container>
+
+</div>
