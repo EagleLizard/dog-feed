@@ -18,6 +18,7 @@ import {
 import { DogFeedComponent } from './views/dog-feed/dog-feed.component';
 import { PalsComponent } from './views/pals/pals.component';
 import { PalCardComponent } from './views/pals/pal-card/pal-card.component';
+import { PalAvatarComponent } from './views/pals/pal-card/pal-avatar/pal-avatar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PalCardComponent } from './views/pals/pal-card/pal-card.component';
     HeaderComponent,
     DogFeedComponent,
     PalsComponent,
-    PalCardComponent
+    PalCardComponent,
+    PalAvatarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,49 @@
-<div class="dg-pal-card">
-  {{ pal.name }}
+<div
+  class="dg-pal-card"
+  [ngClass]="{'full-card':showFullCard}">
+  <md-card>
+    <md-card-header>
+      <span class="avatar">
+        <div
+          md-card-avatar
+          [hidden]="!pal||!avatarImageStyle"
+          [style.background-image]="avatarImageStyle"
+          [style.background-size]="avatarImageSize">
+        </div>
+      </span>
+      <span class="header-text">
+        <div class="title-text">
+          {{ pal.name }}
+        </div>
+        <div class="subtitle-container">
+          <div class="subtitle-text">
+            {{ pal.age }} months old
+          </div>
+          <div class="show-more-container">
+              <div class="bio-action-link">
+                <div
+                  class="bio-prompt"
+                  (click)="toggleFullCard()">
+                  See Bio
+                </div>
+                <md-icon>
+                  keyboard_arrow_down
+                </md-icon>
+              </div>
+          </div>
+        </div>
+      </span>
+    </md-card-header>
+    <img
+      [hidden]="!showFullCard"
+      md-card-image
+      src="{{profileImageStyle}}" />
+    <md-card-content *ngIf="showFullCard && pal.bio">
+      <div
+        class="content-text"
+        *ngFor="let sentence of pal.bio">
+        {{ sentence }}
+      </div>
+    </md-card-content>
+  </md-card>
 </div>

@@ -1,3 +1,6 @@
+@import "./text-styles.scss";
+$pal-panel-button-color: rgba(107, 115, 154, 0.1);
+
 .dg-app{
   position: absolute;
   right: 0;
@@ -5,7 +8,10 @@
   left: 0;
   top: 0;
   .sidenav-container{
-    height: 100%;
+    position: absolute;
+    top:64px;
+    bottom: 0;
+    width: 100%;
     .content-container{
       display: flex;
       height: 100%;
@@ -16,10 +22,12 @@
         height: 100%;
         width: 30px;
         transition: background-color 0.3s ease;
+        // border-left: 1px solid rgba(0,0,0,0.1);
+        background-color: $pal-panel-button-color;
 
         &:hover{
           cursor: pointer;
-          background-color: rgb(245, 245, 245);
+          background-color: lighten($pal-panel-button-color, 10%);
         }
         user-select: none;
         &.sidenav-open{
@@ -28,7 +36,7 @@
           }
         }
         md-icon{
-          opacity: 0.5;
+          opacity: 0.3;
           transform-origin: 26px 39px;
           transition: transform 0.2s;
           position: absolute;

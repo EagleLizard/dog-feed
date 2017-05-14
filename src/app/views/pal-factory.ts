@@ -16,7 +16,7 @@ export default function makePals():Pal[]{
     let newPal = new Pal(name);
     if(name === 'Rex'){
       newPal.age = 29;
-      newPal.bio = 'THREE WORDS: FETCH, FETCH & FETCH. I LOVE TO PLAY ALL DAY AND ENJOY STEALING SNACKS FROM THE BIN WHEN DAD’S NOT HOME ;) BARK ME A MESSAGE!';
+      newPal.bio = ['THREE WORDS: FETCH, FETCH & FETCH.', 'I LOVE TO PLAY ALL DAY AND ENJOY STEALING SNACKS FROM THE BIN WHEN DAD’S NOT HOME 😉','BARK ME A MESSAGE!'];
     }
     return newPal;
   });
