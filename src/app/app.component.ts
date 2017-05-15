@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dg works!';
   isSidenavOpen:boolean = false;
 
   constructor(){

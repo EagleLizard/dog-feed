@@ -3,14 +3,18 @@
   [ngClass]="{'full-card':showFullCard}">
   <md-card>
     <md-card-header>
-      <span class="avatar">
+      <!-- <span class="avatar">
         <div
           md-card-avatar
           [hidden]="!pal||!avatarImageStyle"
           [style.background-image]="avatarImageStyle"
           [style.background-size]="avatarImageSize">
         </div>
-      </span>
+      </span> -->
+      <dg-pal-avatar
+        [doHide]="!pal||!avatarImageStyle"
+        [pal]="pal">
+      </dg-pal-avatar>
       <span class="header-text">
         <div class="title-text">
           {{ pal.name }}
@@ -35,6 +39,7 @@
       </span>
     </md-card-header>
     <img
+      class="profile-pic"
       [hidden]="!showFullCard"
       md-card-image
       src="{{profileImageStyle}}" />
