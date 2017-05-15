@@ -6,19 +6,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './nav/header/header.component';
+
+//services
 import { PalsService } from './views/pals.service';
+import { DogFeedService } from './views/dog-feed/dog-feed.service';
 
 import {
   MdToolbarModule,
   MdSidenavModule,
   MdButtonModule,
   MdIconModule,
-  MdCardModule
+  MdCardModule,
+  MdInputModule
  } from '@angular/material';
 import { DogFeedComponent } from './views/dog-feed/dog-feed.component';
 import { PalsComponent } from './views/pals/pals.component';
 import { PalCardComponent } from './views/pals/pal-card/pal-card.component';
 import { PalAvatarComponent } from './views/pals/pal-card/pal-avatar/pal-avatar.component';
+import { FeedItemComponent } from './views/dog-feed/feed-item/feed-item.component';
+import { FeedInputComponent } from './views/dog-feed/feed-input/feed-input.component';
+import { FeedReactionsComponent } from './views/dog-feed/feed-item/feed-reactions/feed-reactions.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,10 @@ import { PalAvatarComponent } from './views/pals/pal-card/pal-avatar/pal-avatar.
     DogFeedComponent,
     PalsComponent,
     PalCardComponent,
-    PalAvatarComponent
+    PalAvatarComponent,
+    FeedItemComponent,
+    FeedInputComponent,
+    FeedReactionsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +48,12 @@ import { PalAvatarComponent } from './views/pals/pal-card/pal-avatar/pal-avatar.
     MdSidenavModule,
     MdButtonModule,
     MdIconModule,
-    MdCardModule
+    MdCardModule,
+    MdInputModule
   ],
   providers: [
-    PalsService
+    PalsService,
+    DogFeedService
   ],
   bootstrap: [AppComponent]
 })

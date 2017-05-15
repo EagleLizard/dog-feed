@@ -1,0 +1,19 @@
+dg-feed-reactions{
+  width: 100%;
+}
+.dg-feed-reactions{
+  display: flex;
+  padding: 12px 24px;
+  text-align:center;
+  .up-paws, .bark-count{
+    padding-top: 18px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+  .up-paws{
+    border-right: 1px solid rgba(0,0,0,0.1);
+    flex: 1 1;
+  }
+  .bark-count{
+    flex: 1 1;
+  }
+}

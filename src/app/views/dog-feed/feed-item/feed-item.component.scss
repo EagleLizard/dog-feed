@@ -1,0 +1,21 @@
+.dg-feed-item{
+  margin: 5px 0;
+  margin-bottom: 30px;
+  md-card{
+    background-color: rgba(#f1ef97, 0.12);
+  }
+  .header-text{
+    display: inline;
+    padding-left: 18px;
+  }
+  .status-container{
+    padding-top:10px;
+    padding-left: 60px;
+  }
+  .quote-icon-container{
+    padding-right: 8px;
+  }
+  .reaction-container{
+    width: 100%;
+  }
+}

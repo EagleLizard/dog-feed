@@ -1,0 +1,40 @@
+<div class="dg-feed-item">
+  <md-card>
+    <md-card-header>
+      <span>
+        <dg-pal-avatar
+          [doHide]="!feedItem || !feedItem.poster"
+          [pal]="feedItem.poster">
+        </dg-pal-avatar>
+      </span>
+      <div class="header-text">
+        <div class="title-text sm">
+          {{ feedItem.poster.name }}
+        </div>
+        <div class="subtitle-text">
+          {{ feedItem.timeAgoString }}
+        </div>
+      </div>
+    </md-card-header>
+    <md-card-content>
+      <div class="content-text lg status-container">
+        <span class="quote-icon-container">
+          <md-icon>
+            format_quote
+          </md-icon>
+        </span>
+        <span>
+          {{ feedItem.status }}
+        </span>
+      </div>
+    </md-card-content>
+    <md-card-actions>
+      <div class="reaction-container">
+        <dg-feed-reactions
+          [upPaws]="feedItem.numPaws"
+          [barks]="feedItem.numBarks">
+        </dg-feed-reactions>
+      </div>
+    </md-card-actions>
+  </md-card>
+</div>

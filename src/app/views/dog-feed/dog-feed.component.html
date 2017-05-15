@@ -1,3 +1,13 @@
 <div class="dg-dog-feed">
-  
+  <div class="feed-header">
+    <md-toolbar>
+      DogFeed
+    </md-toolbar>
+  </div>
+  <div
+    class="feed-item-container"
+    *ngFor="let feedItem of feedItems">
+    <dg-feed-item [feedItem]="feedItem">
+    </dg-feed-item>
+  </div>
 </div>
