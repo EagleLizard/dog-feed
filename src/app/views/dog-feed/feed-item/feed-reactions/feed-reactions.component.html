@@ -1,15 +1,15 @@
 <div class="dg-feed-reactions">
-  <div class="up-paws">
+  <div class="up-paws action-text">
     <div *ngIf="upPaws > 0">
-      {{upPaws}} UP PAWS
+      <span class="link-text">{{upPaws}}</span> UP-PAWS
     </div>
     <div *ngIf="upPaws == 0">
       BE THE FIRST TO PAW-UP
     </div>
   </div>
-  <div class="bark-count">
+  <div class="bark-count action-text">
     <div *ngIf="barks > 0">
-      {{barks}} BARKS
+      <span class="link-text">{{barks}}</span> BARKS
     </div>
     <div *ngIf="barks == 0">
       BE THE FIRST TO BARK

@@ -23,7 +23,10 @@
       align="end"
       mode="side"
       opened="false">
-      <dg-pals>
+      <dg-pals
+        *ngIf="pals&&pals.length"
+        (onViewInit)="onPalsViewInit(sidenav)"
+        [pals]="pals">
       </dg-pals>
     </md-sidenav>
   </md-sidenav-container>

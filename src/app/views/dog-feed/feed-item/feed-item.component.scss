@@ -2,7 +2,10 @@
   margin: 5px 0;
   margin-bottom: 30px;
   md-card{
-    background-color: rgba(#f1ef97, 0.12);
+    background-color: rgba(#eeec6c, 0.1);
+    &.mat-card{
+      padding: 18px;
+    }
   }
   .header-text{
     display: inline;
@@ -10,7 +13,8 @@
   }
   .status-container{
     padding-top:10px;
-    padding-left: 60px;
+    padding-bottom: 0;
+    padding-left: 32px;
   }
   .quote-icon-container{
     padding-right: 8px;

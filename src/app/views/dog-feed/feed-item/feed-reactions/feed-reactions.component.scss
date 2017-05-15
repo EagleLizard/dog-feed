@@ -1,16 +1,20 @@
+$reaction-border-color: rgba(0,0,0,0.2);
 dg-feed-reactions{
   width: 100%;
 }
 .dg-feed-reactions{
   display: flex;
-  padding: 12px 24px;
-  text-align:center;
+  padding: 0px 24px;
+  text-align:left;
   .up-paws, .bark-count{
-    padding-top: 18px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 12px;
+    border-top: 1px solid $reaction-border-color;
+    .link-text{
+      color: rgb(110, 141, 163);
+    }
   }
   .up-paws{
-    border-right: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid $reaction-border-color;
     flex: 1 1;
   }
   .bark-count{

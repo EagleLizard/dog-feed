@@ -2,7 +2,7 @@ import { Pal } from '../pal';
 
 const TIME_RANGE_MS = {
   min:6e5/2, //5 minutes
-  max:1.8e7/3
+  max:1.8e6
 }
 
 const ONE_MINUTE_MS:number = 6e4;

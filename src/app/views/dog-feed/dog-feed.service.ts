@@ -23,8 +23,24 @@ export class DogFeedService {
     FEED_ITEMS.push(
       new DogFeedItem(
         palsService.getPalById(3),
-        'Currently hiding while my family tried to give a B-A-T-H. I smell fine! Bored...someone bark at me 👌🏼.',
-        2,
+        'Hiding in the pantry. My family tried to give a B-A-T-H. I smell fine!',
+        26,
+        2
+      )
+    );
+    FEED_ITEMS.push(
+      new DogFeedItem(
+        palsService.getPalById(1),
+        'Bark 😏',
+        284,
+        771
+      )
+    );
+    FEED_ITEMS.push(
+      new DogFeedItem(
+        palsService.getPalById(6),
+        'Bored...someone bark at me 👌🏼.',
+        0,
         15
       )
     );

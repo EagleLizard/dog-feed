@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { PalsService } from '../pals.service';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
+
 import { Pal } from '../pal';
 
 @Component({
@@ -7,16 +14,21 @@ import { Pal } from '../pal';
   templateUrl: './pals.component.html',
   styleUrls: ['./pals.component.scss']
 })
-export class PalsComponent implements OnInit {
+export class PalsComponent implements OnInit, AfterViewInit {
 
-  pals:Pal[];
+  @Input() pals:Pal[];
+  @Output() onViewInit = new EventEmitter<number>();
 
   constructor(
-    private palsService:PalsService
+
   ) { }
 
   ngOnInit() {
-    this.pals = this.palsService.getPals();
+    console.log(this.pals);
+  }
+
+  ngAfterViewInit(){
+    this.onViewInit.emit(0);
   }
 
 }
